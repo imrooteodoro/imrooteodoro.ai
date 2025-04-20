@@ -18,13 +18,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Imrooteodoro Ramdomly Bucket
+title: Imrooteodoro Randomly Bucket
 email: imrooteodoro.ai.dev@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Olá! Seja bem-vindo(a) ao meu repositório de ideias aleatórias.
   Por que essa saudação está no rodapé da página? Bom, eu também não sei.
   Mas se você chegou até aqui, provavelmente tem alguma curiosidade sobre mim...
-  
+
 baseurl: imrooteodoro.ai/ # the subpath of your site, e.g. /blog
 url: https://imrooteodoro.github.io/imrooteodoro.ai/ # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
