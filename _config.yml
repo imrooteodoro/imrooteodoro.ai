@@ -21,9 +21,10 @@
 title: Imrooteodoro Ramdomly Bucket
 email: imrooteodoro.ai.dev@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Olá! Seja bem-vindo (a) ao meu repositório de ideais aleatórias. O porquê dessa saudação estar 
-  no rodapé da página? Bom, eu não sei, mas se entrastes no nesse link, provavelmente tens curiosidades
-  acerca da minha pessoa...
+  Olá! Seja bem-vindo(a) ao meu repositório de ideias aleatórias.
+  Por que essa saudação está no rodapé da página? Bom, eu também não sei.
+  Mas se você chegou até aqui, provavelmente tem alguma curiosidade sobre mim...
+  
 baseurl: imrooteodoro.ai/ # the subpath of your site, e.g. /blog
 url: https://imrooteodoro.github.io/imrooteodoro.ai/ # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
