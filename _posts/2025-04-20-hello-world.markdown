@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Hello, World!"
+author: Teodoro, Adelson
 date:   2025-04-20 18:31:35 -0300
 categories: teste
 ---
