@@ -47,10 +47,10 @@
     <!-- Navegação entre posts -->
     <div class="flex justify-between items-center mt-12 border-t pt-6 dark:border-gray-700">
       {% if page.previous %}
-        <a href="{{ page.previous.url }}" class="text-blue-600 dark:text-blue-400 hover:underline">&larr; {{ page.previous.title }}</a>
+        <a href="{{ site.baseurl }}{{ page.previous.url }}" class="text-blue-600 dark:text-blue-400 hover:underline">&larr; {{ page.previous.title }}</a>
       {% endif %}
       {% if page.next %}
-        <a href="{{ page.next.url }}" class="text-blue-600 dark:text-blue-400 hover:underline ml-auto">{{ page.next.title }} &rarr;</a>
+        <a href="{{ site.baseurl }}{{ page.next.url }}" class="text-blue-600 dark:text-blue-400 hover:underline ml-auto">{{ page.next.title }} &rarr;</a>
       {% endif %}
     </div>
   </main>
