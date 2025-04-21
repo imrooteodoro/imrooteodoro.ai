@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% include tailwind.html %}
+  <title>Blog - RandomlyBucket</title>
+</head>
+<body class="bg-gray-50 dark:bg-black text-gray-900 dark:text-white font-sans">
+  {% include header.html %}
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Título -->
+    <h1 class="text-4xl font-extrabold mb-10 text-center tracking-tight">📰 Últimos Posts</h1>
+
+    <!-- Barra de pesquisa e filtros -->
+    <div class="flex flex-col md:flex-row md:items-center justify-center mb-10 gap-6">
+      <!-- Pesquisa -->
+      <div class="w-full md:w-1/2">
+        <input
+          type="text"
+          placeholder="Pesquisar posts..."
+          class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
+          aria-label="Pesquisar posts"
+        />
+      </div>
+
+      <!-- Filtros -->
+      <div class="flex flex-wrap gap-2">
+        {% assign tags = site.tags %}
+        {% if tags %}
+          {% for tag in tags %}
+            <!-- <a 
+              href="{{ site.baseurl }}/tag/{{ tag[0] | slugify }}" 
+              class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full hover:bg-blue-200 dark:bg-gray-700 dark:text-blue-300 dark:hover:bg-gray-600 transition"
+            >
+              #{{ tag[0] }}
+            </a> -->
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Lista de posts -->
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {% for post in site.posts %}
+        <article class="bg-white dark:bg-gray-900 rounded-xl shadow hover:shadow-lg transition duration-300 overflow-hidden h-full flex flex-col">
+          <a href="{{ post.url }}" class="flex flex-col h-full">
+            {% if post.image %}
+              <img 
+                src="{{ post.image }}" 
+                alt="Imagem de capa: {{ post.title }}" 
+                class="w-full h-48 object-cover" 
+                loading="lazy"
+              />
+            {% endif %}
+            <div class="p-6 flex-grow">
+              <h2 class="text-2xl font-semibold mb-2 hover:text-blue-600 dark:hover:text-blue-400 transition">{{ post.title }}</h2>
+              <p class="text-gray-500 dark:text-gray-400 text-sm mb-3">
+                {{ post.date | date: "%d/%m/%Y" }}
+                {% if post.author %} — <span class="italic">{{ post.author }}</span>{% endif %}
+              </p>
+              <p class="text-gray-700 dark:text-gray-300 text-base line-clamp-3">
+                {{ post.excerpt | strip_html | truncatewords: 30 }}
+              </p>
+            </div>
+            <div class="px-6 pb-4">
+              <span class="text-blue-600 dark:text-blue-400 text-sm font-medium hover:underline">Ler mais →</span>
+            </div>
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+    
+    <!-- Paginação (opcional) -->
+    {% if paginator.total_pages > 1 %}
+    <div class="flex justify-center mt-12">
+      <nav aria-label="Paginação do blog" class="inline-flex">
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path }}" class="px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-l-md hover:bg-gray-100 dark:hover:bg-gray-700">Anterior</a>
+        {% else %}
+          <span class="px-4 py-2 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-700 rounded-l-md text-gray-400 dark:text-gray-500 cursor-not-allowed">Anterior</span>
+        {% endif %}
+        
+        {% for page in (1..paginator.total_pages) %}
+          {% if page == paginator.page %}
+            <span class="px-4 py-2 bg-blue-600 text-white border border-blue-600">{{ page }}</span>
+          {% else %}
+            <a href="{% if page == 1 %}{{ site.baseurl }}/{% else %}{{ site.paginate_path | replace: ':num', page }}{% endif %}" class="px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">{{ page }}</a>
+          {% endif %}
+        {% endfor %}
+        
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path }}" class="px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-r-md hover:bg-gray-100 dark:hover:bg-gray-700">Próximo</a>
+        {% else %}
+          <span class="px-4 py-2 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-700 rounded-r-md text-gray-400 dark:text-gray-500 cursor-not-allowed">Próximo</span>
+        {% endif %}
+      </nav>
+    </div>
+    {% endif %}
+  </main>
+
+  {% include footer.html %}
+  {% include search_post.html %}
+</body>
+</html>

@@ -1,0 +1,21 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchInput = document.querySelector('input[type="text"]');
+      
+      searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+        const articles = document.querySelectorAll('article');
+        
+        articles.forEach(article => {
+          const title = article.querySelector('h2').textContent.toLowerCase();
+          const content = article.querySelector('p:last-of-type').textContent.toLowerCase();
+          
+          if (title.includes(searchTerm) || content.includes(searchTerm)) {
+            article.style.display = '';
+          } else {
+            article.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>

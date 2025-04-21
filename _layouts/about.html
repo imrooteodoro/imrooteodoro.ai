@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% include tailwind.html %}
+  <title>Sobre - RandomlyBucket</title>
+</head>
+<body class="bg-gray-50 dark:bg-black text-gray-900 dark:text-white font-sans">
+
+  {% include header.html %}
+
+  <main class="max-w-3xl mx-auto px-6 py-12">
+    <h1 class="text-4xl font-bold mb-4 text-center">Sobre o RandomlyBucket</h1>
+
+    <p class="text-lg mb-6 leading-relaxed text-justify">
+      O <strong>RandomlyBucket</strong> nasceu da vontade de compartilhar ideias, experiências, curiosidades e tudo mais que faz a vida ser uma mistura aleatória de aprendizados. Seja você um entusiasta de tecnologia, matemática, idiomas, xadrez, filosofia ou apenas alguém curioso, aqui é seu lugar.
+    </p>
+
+    <p class="text-lg mb-6 leading-relaxed text-justify">
+      Este blog é mantido por <strong>{{ page.author }}</strong>, um apaixonado por explorar diferentes temas e conectar pontos inesperados entre eles. A proposta é simples: criar um espaço livre para reflexões, tutoriais, dicas, histórias e tudo o que surgir pelo caminho.
+    </p>
+
+    <p class="text-lg mb-6 leading-relaxed text-justify">
+      Sinta-se à vontade para navegar pelos posts, deixar comentários, sugerir pautas ou simplesmente acompanhar as atualizações.💡
+    </p>
+
+    <div class="mt-10 text-center">
+      <a href="{{ site.baseurl }}/" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+        ← Voltar para o Início
+      </a>
+    </div>
+  </main>
+
+  {% include footer.html %}
+
+</body>
+</html>

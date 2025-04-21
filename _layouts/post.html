@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% include tailwind.html %}
+  <title>{{ page.title }} - RandomlyBucket</title>
+</head>
+<body class="bg-white dark:bg-black text-gray-900 dark:text-white font-sans leading-relaxed">
+
+  {% include header.html %}
+
+  <main class="max-w-3xl mx-auto px-6 py-12">
+    <!-- Título -->
+    <h1 class="text-4xl font-extrabold mb-4">{{ page.title }}</h1>
+
+    <!-- Metadados -->
+    <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">
+      Publicado em {{ page.date | date: "%d/%m/%Y" }}
+      {% if page.author %} por <span class="italic">{{ page.author }}</span>{% endif %}
+    </p>
+
+    <!-- Imagem de capa -->
+    {% if page.image %}
+      <img src="{{ page.image }}" alt="Capa do post" class="w-full rounded-lg mb-8 shadow" />
+    {% endif %}
+
+    <!-- Conteúdo do artigo -->
+    <article class="prose dark:prose-invert max-w-none prose-lg">
+      {{ content }}
+    </article>
+
+    <!-- Tags -->
+    {% if page.tags %}
+      <div class="mt-10">
+        <h3 class="text-lg font-semibold mb-2">Tags:</h3>
+        <div class="flex flex-wrap gap-2">
+          {% for tag in page.tags %}
+            <a href="#" class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full hover:bg-blue-200 dark:bg-gray-700 dark:text-blue-300 dark:hover:bg-gray-600 transition">
+              #{{ tag }}
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+    <!-- Navegação entre posts -->
+    <div class="flex justify-between items-center mt-12 border-t pt-6 dark:border-gray-700">
+      {% if page.previous %}
+        <a href="{{ page.previous.url }}" class="text-blue-600 dark:text-blue-400 hover:underline">&larr; {{ page.previous.title }}</a>
+      {% endif %}
+      {% if page.next %}
+        <a href="{{ page.next.url }}" class="text-blue-600 dark:text-blue-400 hover:underline ml-auto">{{ page.next.title }} &rarr;</a>
+      {% endif %}
+    </div>
+  </main>
+
+  {% include footer.html %}
+</body>
+</html>

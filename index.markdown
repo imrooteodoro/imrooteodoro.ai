@@ -7,4 +7,5 @@ layout: home
 ---
 
 {% include mathjax.html %}
+{% include tailwind.html %}
 
