@@ -54,7 +54,7 @@ Assim como as antigas rapsódias cantavam feitos heroicos, mitos e paixões, a o
 <br> <br>
 
 
-```Caso queira escutar a música, há uma play com a prévia abaixo: ```
+```Caso queira escutar a música, há um play com a prévia abaixo: ```
 
 <br><br>
 <div class="m-auto">
