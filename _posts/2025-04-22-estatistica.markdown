@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "Anotações malucas de estatistica"
+author: Teodoro, Adelson
+date:   2025-04-20 00:51:35
+categories: math
+tags: [math, science, latex]
+---
+
+<div> </div>
+
+$$\sigma = \sqrt{\frac{\sum_{i=1}^{n}(X_i - \bar{X})^2}{n - 1}}$$
+
+
+{% include mathjax.html %}
