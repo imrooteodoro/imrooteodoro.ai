@@ -16,7 +16,7 @@ Se você já me encontrou pelo GitHub, Instagram, YouTube ou em qualquer outro l
 <br>
 <li>root: é um substantivo em inglês que significa raiz. Mas aqui é também um trocadilho com o conceito de superuser ou root user em sistemas baseados em Linux;</li> 
 <br>
-<li>eodoro: é a parte final, que carrega o som do /t/ de root quando o nome é lido de forma fluida. Essa parte vem do meu sobrenome, Teodoro, cuja origem é grega: Théos (Deus) + Doron (Dádiva), ou seja, Dádiva de Deus. Curiosamente, esse é o único trecho verdadeiramente bonito do meu nome.</li> 
+<li>eodoro: é a parte final, que carrega o som do /t/ de root quando o nome é lido de forma fluida. Essa parte vem do meu sobrenome, Teodoro, cuja origem é grega: Theós (Deus) + Doron (Dádiva), ou seja, Dádiva de Deus. Curiosamente, esse é o único trecho verdadeiramente bonito do meu nome.</li> 
 </ol>
 <br>
 <br>
