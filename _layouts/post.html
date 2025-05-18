@@ -16,8 +16,8 @@
 
     <!-- Metadados -->
     <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">
-      Publicado em {{ page.date | date: "%d/%m/%Y" }}
-      {% if page.author %} por <span class="italic">{{ page.author }}</span>{% endif %}
+      Publicado em {{ page.date | date: "%d/%m/%Y às %H:%M:%S" }}
+     {% if page.author %} por <span class="italic">{{ page.author }}</span>{% endif %}
     </p>
 
     <!-- Imagem de capa -->
