@@ -2,7 +2,7 @@
 layout: post
 title: A "história" do nome de usuário imrooteodoro.
 author: Adelson Teodoro
-date:   2025-05-17 00:21:20
+date:   2025-05-17 21:20:20
 categories: aleatoriedade
 tags: [etimologia, linguística,criatividade]
 ---
