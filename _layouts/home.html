@@ -4,103 +4,202 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   {% include tailwind.html %}
-  <title>Blog - RandomlyBucket</title>
+  <title>Random Bucket</title>
+  <style>
+    .folder-icon {
+      width: 80px;
+      height: 80px;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .folder-icon:hover {
+      transform: translateY(-4px);
+    }
+    .folder-tab {
+      width: 35px;
+      height: 10px;
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+      border-radius: 3px 3px 0 0;
+      position: absolute;
+      top: 0;
+      left: 8px;
+    }
+    .folder-body {
+      width: 80px;
+      height: 65px;
+      background: linear-gradient(135deg, #fcd34d 0%, #fbbf24 100%);
+      border-radius: 4px;
+      position: absolute;
+      top: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .dark .folder-tab {
+      background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+    }
+    .dark .folder-body {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    }
+  </style>
 </head>
 <body class="bg-gray-50 dark:bg-black text-gray-900 dark:text-white font-sans">
   {% include header.html %}
 
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <!-- Título -->
-    <h1 class="text-4xl font-extrabold mb-10 text-center tracking-tight">📰 Últimos Posts</h1>
-
-    <!-- Barra de pesquisa e filtros -->
-    <div class="flex flex-col md:flex-row md:items-center justify-center mb-10 gap-6">
-      <!-- Pesquisa -->
-      <div class="w-full md:w-1/2">
-        <input
-          type="text"
-          placeholder="Pesquisar posts..."
-          class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
-          aria-label="Pesquisar posts"
-        />
-      </div>
-
-      <!-- Filtros -->
-      <div class="flex flex-wrap gap-2">
-        {% assign tags = site.tags %}
-        {% if tags %}
-          {% for tag in tags %}
-            <!-- <a 
-              href="{{ site.baseurl }}/tag/{{ tag[0] | slugify }}" 
-              class="bg-blue-100 text-blue-800 text-sm font-medium px-4 py-2 rounded-full hover:bg-blue-200 dark:bg-gray-700 dark:text-blue-300 dark:hover:bg-gray-600 transition"
-            >
-              #{{ tag[0] }}
-            </a> -->
-          {% endfor %}
-        {% endif %}
-      </div>
-    </div>
-
-    <!-- Lista de posts -->
-    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-      {% for post in site.posts %}
-        <article class="bg-white dark:bg-gray-900 rounded-xl shadow hover:shadow-lg transition duration-300 overflow-hidden h-full flex flex-col">
-          <a href="{{site.baseurl}}{{ post.url }}" class="flex flex-col h-full">
-            {% if post.image %}
+    <div class="flex flex-col lg:flex-row gap-8">
+      
+      <!-- Sidebar -->
+      <aside class="lg:w-72 flex-shrink-0">
+        <div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-6 sticky top-6">
+          <!-- Foto de perfil -->
+          <div class="text-center mb-6">
+            <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-500 shadow-lg">
               <img 
-                src="{{ post.image }}" 
-                alt="Imagem de capa: {{ post.title }}" 
-                class="w-full h-48 object-cover" 
-                loading="lazy"
+                src="{{ site.baseurl }}/assets/img/me.png" 
+                alt="Foto de perfil" 
+                class="w-full h-full object-cover"
+                onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect fill=%22%236b7280%22 width=%22100%22 height=%22100%22/%3E%3Ctext x=%2250%22 y=%2255%22 font-size=%2240%22 text-anchor=%22middle%22 fill=%22white%22%3E👤%3C/text%3E%3C/svg%3E'"
               />
-            {% endif %}
-            <div class="p-6 flex-grow">
-              <h2 class="text-2xl font-semibold mb-2 hover:text-blue-600 dark:hover:text-blue-400 transition">{{ post.title }}</h2>
-              <p class="text-gray-500 dark:text-gray-400 text-sm mb-3">
-                {{ post.date | date: "%d/%m/%Y" }}
-                {% if post.author %} — <span class="italic">{{ post.author }}</span>{% endif %}
-              </p>
-              <p class="text-gray-700 dark:text-gray-300 text-base line-clamp-3">
-                {{ post.excerpt | strip_html | truncatewords: 30 }}
-              </p>
             </div>
-            <div class="px-6 pb-4">
-              <span class="text-blue-600 dark:text-blue-400 text-sm font-medium hover:underline">Ler mais →</span>
+            <h3 class="text-xl font-bold"Adelson Teodoro</h3>
+            <p class="text-gray-500 dark:text-gray-400 text-sm">AI Engineer | Software Developer</p>
+          </div>
+
+          <!-- Sobre -->
+          <div class="mb-6 pb-6 border-b border-gray-200 dark:border-gray-700">
+            <h4 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase mb-2">Sobre</h4>
+            <p class="text-sm text-gray-700 dark:text-gray-300">
+              Bem-vindo ao meu espaço digital onde compartilho  histórias, projetos e aleatoriedades.
+            </p>
+          </div>
+
+          <!-- Links sociais -->
+          <div>
+            <h4 class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase mb-3">Conecte-se</h4>
+            <div class="flex gap-3">
+              <a href="https://github.com/imrooteodoro" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-blue-500 dark:hover:bg-blue-600 hover:text-white transition">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/adelson-teodoro-dev/" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-blue-500 dark:hover:bg-blue-600 hover:text-white transition">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
             </div>
-          </a>
-        </article>
-      {% endfor %}
+          </div>
+        </div>
+      </aside>
+
+      <!-- Conteúdo principal -->
+      <div class="flex-1">
+        <!-- Título -->
+        <h1 class="text-4xl font-extrabold mb-10 tracking-tight">📁 Categorias</h1>
+
+       
+
+        <!-- Grid de pastas por categoria -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 mb-12" id="folders-grid">
+          {% assign categories = site.categories | sort %}
+          {% for category in categories %}
+            <a href="{{ site.baseurl }}/category/{{ category[0] | slugify }}" class="folder-container flex flex-col items-center text-center group">
+              <div class="folder-icon mb-3">
+                <div class="folder-tab"></div>
+                <div class="folder-body"></div>
+              </div>
+              <span class="text-sm font-medium group-hover:text-blue-600 dark:group-hover:text-blue-400 transition">
+                {{ category[0] }}
+              </span>
+              <span class="text-xs text-gray-500 dark:text-gray-400">
+                ({{ category[1].size }} post{% if category[1].size != 1 %}s{% endif %})
+              </span>
+            </a>
+          {% endfor %}
+        </div>
+
+
+         <!-- Barra de pesquisa -->
+        <div class="mb-10">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Pesquisar posts..."
+            class="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
+            aria-label="Pesquisar posts"
+          />
+        </div>
+
+        <!-- Lista de posts recentes -->
+        <div class="mt-12">
+          <h2 class="text-3xl font-bold mb-6">📰 Posts Recentes</h2>
+          <div class="grid gap-6 sm:grid-cols-2" id="posts-grid">
+            {% for post in site.posts limit:6 %}
+              <article class="bg-white dark:bg-gray-900 rounded-xl shadow hover:shadow-lg transition duration-300 overflow-hidden post-item">
+                <a href="{{site.baseurl}}{{ post.url }}" class="flex flex-col h-full">
+                  {% if post.image %}
+                    <img 
+                      src="{{ post.image }}" 
+                      alt="Imagem de capa: {{ post.title }}" 
+                      class="w-full h-40 object-cover" 
+                      loading="lazy"
+                    />
+                  {% endif %}
+                  <div class="p-5 flex-grow">
+                    <h3 class="text-xl font-semibold mb-2 hover:text-blue-600 dark:hover:text-blue-400 transition post-title">{{ post.title }}</h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-xs mb-3">
+                      {{ post.date | date: "%d/%m/%Y" }}
+                      {% if post.categories[0] %} 
+                        <span class="ml-2 px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded text-xs">
+                          {{ post.categories[0] }}
+                        </span>
+                      {% endif %}
+                    </p>
+                    <p class="text-gray-700 dark:text-gray-300 text-sm line-clamp-2 post-excerpt">
+                      {{ post.excerpt | strip_html | truncatewords: 20 }}
+                    </p>
+                  </div>
+                </a>
+              </article>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
     </div>
-    
-    <!-- Paginação (opcional) -->
-    {% if paginator.total_pages > 1 %}
-    <div class="flex justify-center mt-12">
-      <nav aria-label="Paginação do blog" class="inline-flex">
-        {% if paginator.previous_page %}
-          <a href="{{ paginator.previous_page_path }}" class="px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-l-md hover:bg-gray-100 dark:hover:bg-gray-700">Anterior</a>
-        {% else %}
-          <span class="px-4 py-2 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-700 rounded-l-md text-gray-400 dark:text-gray-500 cursor-not-allowed">Anterior</span>
-        {% endif %}
-        
-        {% for page in (1..paginator.total_pages) %}
-          {% if page == paginator.page %}
-            <span class="px-4 py-2 bg-blue-600 text-white border border-blue-600">{{ page }}</span>
-          {% else %}
-            <a href="{% if page == 1 %}{{ site.baseurl }}/{% else %}{{ site.paginate_path | replace: ':num', page }}{% endif %}" class="px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700">{{ page }}</a>
-          {% endif %}
-        {% endfor %}
-        
-        {% if paginator.next_page %}
-          <a href="{{ paginator.next_page_path }}" class="px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-r-md hover:bg-gray-100 dark:hover:bg-gray-700">Próximo</a>
-        {% else %}
-          <span class="px-4 py-2 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-700 rounded-r-md text-gray-400 dark:text-gray-500 cursor-not-allowed">Próximo</span>
-        {% endif %}
-      </nav>
-    </div>
-    {% endif %}
   </main>
 
   {% include footer.html %}
-  {% include search_post.html %}
+  
+  <script>
+    // Funcionalidade de pesquisa
+    const searchInput = document.getElementById('search-input');
+    const postsGrid = document.getElementById('posts-grid');
+    const foldersGrid = document.getElementById('folders-grid');
+    
+    if (searchInput && postsGrid) {
+      searchInput.addEventListener('input', function(e) {
+        const searchTerm = e.target.value.toLowerCase();
+        const posts = postsGrid.querySelectorAll('.post-item');
+        const folders = foldersGrid.querySelectorAll('.folder-container');
+        
+        posts.forEach(post => {
+          const title = post.querySelector('.post-title').textContent.toLowerCase();
+          const excerpt = post.querySelector('.post-excerpt').textContent.toLowerCase();
+          
+          if (title.includes(searchTerm) || excerpt.includes(searchTerm)) {
+            post.style.display = '';
+          } else {
+            post.style.display = 'none';
+          }
+        });
+        
+        folders.forEach(folder => {
+          const categoryName = folder.querySelector('span').textContent.toLowerCase();
+          
+          if (categoryName.includes(searchTerm)) {
+            folder.style.display = '';
+          } else {
+            folder.style.display = 'none';
+          }
+        });
+      });
+    }
+  </script>
 </body>
 </html>
