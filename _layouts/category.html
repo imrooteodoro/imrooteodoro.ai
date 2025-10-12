@@ -1,1 +1,99 @@
-<p>Oi</p>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% include tailwind.html %}
+  <title>Categoria - Random Bucket</title>
+</head>
+<body class="bg-gray-50 dark:bg-black text-gray-900 dark:text-white font-sans">
+  {% include header.html %}
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Voltar -->
+    <div class="mb-6">
+      <a href="{{ site.baseurl }}/" class="text-blue-600 dark:text-blue-400 hover:underline">
+        ← Voltar para home
+      </a>
+    </div>
+
+    <!-- Título dinâmico -->
+    <h1 class="text-4xl font-extrabold mb-10 tracking-tight" id="category-title">📁 Categoria</h1>
+    
+    <!-- Grid de posts -->
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" id="posts-container">
+      {% for post in site.posts %}
+        <article class="bg-white dark:bg-gray-900 rounded-xl shadow hover:shadow-lg transition duration-300 overflow-hidden post-card" data-categories="{{ post.categories | join: ',' | downcase }}">
+          <a href="{{site.baseurl}}{{ post.url }}" class="flex flex-col h-full">
+            {% if post.image %}
+              <img 
+                src="{{ post.image }}" 
+                alt="Imagem de capa: {{ post.title }}" 
+                class="w-full h-48 object-cover" 
+                loading="lazy"
+              />
+            {% endif %}
+            <div class="p-5 flex-grow">
+              <h2 class="text-xl font-semibold mb-2 hover:text-blue-600 dark:hover:text-blue-400 transition">{{ post.title }}</h2>
+              <p class="text-gray-500 dark:text-gray-400 text-xs mb-3">
+                {{ post.date | date: "%d/%m/%Y" }}
+                {% if post.categories[0] %} 
+                  <span class="ml-2 px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded text-xs">
+                    {{ post.categories[0] }}
+                  </span>
+                {% endif %}
+              </p>
+              <p class="text-gray-700 dark:text-gray-300 text-sm line-clamp-3">
+                {{ post.excerpt | strip_html | truncatewords: 25 }}
+              </p>
+            </div>
+            <div class="px-5 pb-4">
+              <span class="text-blue-600 dark:text-blue-400 text-sm font-medium hover:underline">Ler mais →</span>
+            </div>
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+
+    <!-- Mensagem se não houver posts -->
+    <div id="no-posts" class="hidden text-center py-12">
+      <p class="text-gray-500 dark:text-gray-400 text-lg">Nenhum post encontrado nesta categoria.</p>
+    </div>
+  </main>
+
+  {% include footer.html %}
+
+  <script>
+    // Pegar a categoria da URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const category = urlParams.get('cat');
+    
+    if (category) {
+      // Atualizar o título
+      const categoryTitle = category.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+      document.getElementById('category-title').textContent = '📁 ' + categoryTitle;
+      
+      // Filtrar posts
+      const posts = document.querySelectorAll('.post-card');
+      let visibleCount = 0;
+      
+      posts.forEach(post => {
+        const postCategories = post.getAttribute('data-categories').split(',');
+        const categorySlug = category.toLowerCase();
+        
+        if (postCategories.includes(categorySlug)) {
+          post.style.display = '';
+          visibleCount++;
+        } else {
+          post.style.display = 'none';
+        }
+      });
+      
+      // Mostrar mensagem se não houver posts
+      if (visibleCount === 0) {
+        document.getElementById('no-posts').classList.remove('hidden');
+      }
+    }
+  </script>
+</body>
+</html>

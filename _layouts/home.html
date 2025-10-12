@@ -95,11 +95,11 @@
 
        
 
-        <!-- Grid de pastas por categoria -->
+          <!-- Grid de pastas por categoria -->
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 mb-12" id="folders-grid">
           {% assign categories = site.categories | sort %}
           {% for category in categories %}
-            <a href="{{ site.baseurl }}/category/{{ category[0] | slugify }}" class="folder-container flex flex-col items-center text-center group">
+            <a href="{{ site.baseurl }}/category?cat={{ category[0] | slugify }}" class="folder-container flex flex-col items-center text-center group">
               <div class="folder-icon mb-3">
                 <div class="folder-tab"></div>
                 <div class="folder-body"></div>
