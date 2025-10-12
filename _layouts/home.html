@@ -93,26 +93,26 @@
         <!-- Título -->
         <h1 class="text-4xl font-extrabold mb-10 tracking-tight">📁 Categorias</h1>
 
-       
-
           <!-- Grid de pastas por categoria -->
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 mb-12" id="folders-grid">
-          {% assign categories = site.categories | sort %}
-          {% for category in categories %}
-            <a href="{{ site.baseurl }}/category?cat={{ category[0] | slugify }}" class="folder-container flex flex-col items-center text-center group">
-              <div class="folder-icon mb-3">
-                <div class="folder-tab"></div>
-                <div class="folder-body"></div>
-              </div>
-              <span class="text-sm font-medium group-hover:text-blue-600 dark:group-hover:text-blue-400 transition">
-                {{ category[0] }}
-              </span>
-              <span class="text-xs text-gray-500 dark:text-gray-400">
-                ({{ category[1].size }} post{% if category[1].size != 1 %}s{% endif %})
-              </span>
-            </a>
-          {% endfor %}
-        </div>
+          <div class="overflow-x-auto mb-12">
+            <div class="flex gap-8 px-2 py-2 snap-x snap-mandatory overflow-x-scroll no-scrollbar" id="folders-grid">
+              {% assign categories = site.categories | sort %}
+              {% for category in categories %}
+                <a href="{{ site.baseurl }}/category?cat={{ category[0] | slugify }}" class="folder-container flex flex-col items-center text-center group flex-none w-32 snap-start">
+                  <div class="folder-icon mb-3">
+                    <div class="folder-tab"></div>
+                    <div class="folder-body"></div>
+                  </div>
+                  <span class="text-sm font-medium group-hover:text-blue-600 dark:group-hover:text-blue-400 transition">
+                    {{ category[0] }}
+                  </span>
+                  <span class="text-xs text-gray-500 dark:text-gray-400">
+                    ({{ category[1].size }} post{% if category[1].size != 1 %}s{% endif %})
+                  </span>
+                </a>
+              {% endfor %}
+            </div>
+          </div>
 
 
          <!-- Barra de pesquisa -->
