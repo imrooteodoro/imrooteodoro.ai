@@ -1,0 +1,71 @@
+---
+layout: post
+title: Ego.
+author: Adelson Teodoro
+categories: psique
+date: 2025-10-25 00:02:45
+tags: [xadrez, genialidade, chess engine, superdotação, iq, exatas, modernidade]
+---
+
+Afinal, o que é o ego?
+
+<br><br>
+
+Esta semana aconteceu algo que me deixou profundamente triste. Um Grão-Mestre que eu acompanhava em lives  (streamings) — principalmente na época da pandemia (2019–2021) — faleceu. Ele sofria com depressão há algum tempo. A causa da morte não foi divulgada, mas tudo indica que sua passagem teve relação com o agravamento da doença. Foi isso que me levou a abordar este assunto com tanta ênfase.
+
+<br><br>
+
+Não sou psicólogo, tampouco especialista em comportamento humano.  Sou um mero programador. Não entendo de redes neurais biológicas (analógicas); compreendo redes neurais artificiais e como nossos vieses são fundamentais para o resultado de nossas inferências — ponto onde há convergências. Afinal, nossas opiniões, quando externalizadas, tornam-se ações,  
+e essas ações geram resultados — positivos ou negativos.
+
+<br><br>
+```
+    As comparações entre neurônios artificiais e biológicos
+    se encerram aqui. Seria tolice insistir em comparar
+    um ser humano com uma máquina para além da abstração do bias —
+    neurônio e perceptron, córtex e rede neural convolucional.
+```
+<br><br>
+
+Até onde vai o ego?
+
+<br><br>
+
+O xadrez é um jogo mental — uma verdadeira batalha da mente. Desde sua origem, teve papel importante, principalmente entre as classes mais altas. Afinal, ser um jogador — quiçá um bom jogador — sempre foi sinônimo de erudição.  A Guerra Fria que o diga: EUA vs. URSS, Bobby vs. Spassky. O jogo evoluiu, e o homem deixou de ser o melhor jogador de xadrez do mundo.  
+Tudo começou em 1997, quando uma atualização do computador **Deep Blue**, da IBM, venceu o então campeão mundial **Garry Kasparov** —  foi a primeira vez que uma máquina derrotou um jogador desse nível. Desde então, as **chess engines** evoluíram com diferentes abordagens — da força bruta ao *deep learning* com redes neurais profundas. Assim, humanos com enorme capacidade de memorização e cálculo foram superados por supercomputadores.
+
+<br><br>
+
+Os jogadores de xadrez de alto nível são, definitivamente, gênios.Cerca de duas pessoas a cada dez milhões conseguem tornar-se Grão-Mestres. Eles possuem inteligência espacial e memória muito acima da média. Todavia, isso não os impede de duvidar das capacidades de outro Grão-Mestre, mesmo estando em níveis semelhantes de jogo. Tolice? Não. Ego.
+
+<br><br>
+
+Acusações de trapaça, principalmente em torneios online, tornaram-sae corriqueiras — muitas delas proferidas por ex-campeões mundiais de um passado recente. Ora, só uma máquina consegue vencer um ex-campeão mundial? Claro que não. O xadrez já provou muitas vezes não ser apenas um jogo onde o melhor vence. **Lasker**, o homem que mais tempo manteve o título mundial, usava abordagens psicológicas, escolhendo jogadas teoricamente inferiores para levar o adversário a uma floresta escura onde 2 + 2 é 5 e só um pode sair — como disse o grande **Mikhail Tal**.  
+
+Essas acusações agravaram a saúde mental de **Danya**, um jovem talentoso que via o xadrez não apenas como trabalho, mas como paixão. Viu anos de estudo, normas e títulos serem postos em xeque, sendo obrigado a se provar mesmo sendo um dos melhores jogadores do mundo.
+
+<br><br>
+
+O complexo de superioridade faz com que alguém esqueça de ser empático com o próximo, de se importar com as consequências da externalização de seus vieses. Pode ferir mortalmente o sentimento alheio e causar perdas imensuráveis. O ego é um dos alimentos da **superbia**, o orgulho — o pecado capital original, o mesmo que fez o amaldiçoado cair.
+
+<br><br>
+
+
+```
+"I like the moment when I break a man's ego"
+
+- Bobby Fischer
+```
+
+<br><br>
+
+Destruir o ego de um homem pode ser interessante, principalmente se esse homem for você mesmo.
+
+<br><br>
+
+**Descanse em paz, Danya.** </3
+
+<br><br>
+
+<img src="{{site.baseurl}}/assets/img/danya.jpg" width="500" height="500">
+
