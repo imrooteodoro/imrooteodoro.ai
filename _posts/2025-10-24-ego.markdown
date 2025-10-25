@@ -20,10 +20,11 @@ e essas ações geram resultados — positivos ou negativos.
 
 <br><br>
 ```
-    As comparações entre neurônios artificiais e biológicos
-    se encerram aqui. Seria tolice insistir em comparar
-    um ser humano com uma máquina para além da abstração do bias —
-    neurônio e perceptron, córtex e rede neural convolucional.
+As comparações entre neurônios artificiais e
+biológicos se encerram aqui. Seria tolice
+insistir em comparar um ser humano com uma
+máquina para além da abstração do bias — neurônio e
+perceptron, córtex e rede neural convolucional.
 ```
 <br><br>
 
@@ -59,7 +60,8 @@ O complexo de superioridade faz com que alguém esqueça de ser empático com o 
 
 <br><br>
 
-Destruir o ego de um homem pode ser interessante, principalmente se esse homem for você mesmo.
+Destruir o ego de um homem pode ser interessante,
+principalmente se esse homem for você mesmo.
 
 <br><br>
 
