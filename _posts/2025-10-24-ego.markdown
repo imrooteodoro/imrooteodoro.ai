@@ -4,7 +4,7 @@ title: Ego.
 author: Adelson Teodoro
 categories: psique
 date: 2025-10-25 00:02:45
-tags: [xadrez, genialidade, chess engine, superdotação, iq, exatas, modernidade]
+tags: [ ego, fé, pecado, xadrez, genialidade, chess engine, iq, modernidade]
 ---
 
 Afinal, o que é o ego?
