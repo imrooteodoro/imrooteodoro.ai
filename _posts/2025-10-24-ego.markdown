@@ -20,11 +20,14 @@ e essas ações geram resultados — positivos ou negativos.
 
 <br><br>
 ```
-As comparações entre neurônios artificiais e
-biológicos se encerram aqui. Seria tolice
-insistir em comparar um ser humano com uma
-máquina para além da abstração do bias — neurônio e
-perceptron, córtex e rede neural convolucional.
+As comparações entre neurônios
+artificiais e biológicos se
+encerram aqui. Seria tolice
+insistir em comparar um ser
+humano com uma máquina para 
+além da abstração do bias — 
+neurônio e perceptron, córtex e
+rede neural convolucional.
 ```
 <br><br>
 
@@ -53,7 +56,8 @@ O complexo de superioridade faz com que alguém esqueça de ser empático com o 
 
 
 ```
-"I like the moment when I break a man's ego"
+"I like the moment when 
+I break a man's ego"
 
 - Bobby Fischer
 ```
