@@ -64,10 +64,8 @@ O complexo de superioridade faz com que alguém esqueça de ser empático com o 
 Destruir o ego de um homem pode ser interessante, principalmente se esse homem for você mesmo.
 
 <br><br>
+{% include notes.html type="memorial" text="Descanse em paz, Danya. </3" %}
 
-<p style="text-align:center; font-style: italic;">
-  <strong>Descanse em paz, Danya.</strong> &lt;/3
-</p>
 <br><br>
 
 <img src="{{site.baseurl}}/assets/img/danya.jpg" width="500" height="500">

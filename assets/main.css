@@ -646,4 +646,15 @@ table td {
   color: #099;
 }
 
-/*# sourceMappingURL=main.css.map */
+.note {
+  @apply border-l-4 pl-4 my-6 py-2 rounded-md;
+}
+.note.info {
+  @apply border-blue-500 bg-blue-50 dark:bg-blue-950;
+}
+.note.warning {
+  @apply border-yellow-500 bg-yellow-50 dark:bg-yellow-900;
+}
+.note.memorial {
+  @apply border-gray-500 bg-gray-100 dark:bg-gray-900 italic text-center;
+}
