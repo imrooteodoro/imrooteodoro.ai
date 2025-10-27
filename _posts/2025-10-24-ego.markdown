@@ -19,24 +19,18 @@ Não sou psicólogo, tampouco especialista em comportamento humano.  Sou um mero
 e essas ações geram resultados — positivos ou negativos.
 
 <br><br>
-```
-As comparações entre neurônios
-artificiais e biológicos se
-encerram aqui. Seria tolice
-insistir em comparar um ser
-humano com uma máquina para 
-além da abstração do bias — 
-neurônio e perceptron, córtex e
-rede neural convolucional.
-```
+<blockquote class="border-l-4 border-gray-400 dark:border-gray-600 pl-4 italic text-gray-700 dark:text-gray-300 my-8">
+  As comparações entre neurônios artificiais e biológicos se encerram aqui.  
+  Seria tolice insistir em comparar um ser humano com uma máquina para além da abstração do <em>bias</em> —  
+  neurônio e perceptron, córtex e rede neural convolucional.
+</blockquote>
 <br><br>
 
 Até onde vai o ego?
 
 <br><br>
 
-O xadrez é um jogo mental — uma verdadeira batalha da mente. Desde sua origem, teve papel importante, principalmente entre as classes mais altas. Afinal, ser um jogador — quiçá um bom jogador — sempre foi sinônimo de erudição.  A Guerra Fria que o diga: EUA vs. URSS, Bobby vs. Spassky. O jogo evoluiu, e o homem deixou de ser o melhor jogador de xadrez do mundo.  
-Tudo começou em 1997, quando uma atualização do computador **Deep Blue**, da IBM, venceu o então campeão mundial **Garry Kasparov** —  foi a primeira vez que uma máquina derrotou um jogador desse nível. Desde então, as **chess engines** evoluíram com diferentes abordagens — da força bruta ao *deep learning* com redes neurais profundas. Assim, humanos com enorme capacidade de memorização e cálculo foram superados por supercomputadores.
+O xadrez é um jogo mental — uma verdadeira batalha da mente. Desde sua origem, teve papel importante, principalmente entre as classes mais altas. Afinal, ser um jogador — quiçá um bom jogador — sempre foi sinônimo de erudição.  A Guerra Fria que o diga: EUA vs. URSS, Bobby vs. Spassky. O jogo evoluiu, e o homem deixou de ser o melhor jogador de xadrez do mundo. Tudo começou em 1997, quando uma atualização do computador **Deep Blue**, da IBM, venceu o então campeão mundial **Garry Kasparov** —  foi a primeira vez que uma máquina derrotou um jogador desse nível. Desde então, as **chess engines** evoluíram com diferentes abordagens — da força bruta ao *deep learning* com redes neurais profundas. Assim, humanos com enorme capacidade de memorização e cálculo foram superados por supercomputadores.
 
 <br><br>
 
@@ -55,12 +49,15 @@ O complexo de superioridade faz com que alguém esqueça de ser empático com o 
 <br><br>
 
 
-```
-"I like the moment when 
-I break a man's ego"
+<div class="my-12 text-center">
+  <p class="text-2xl italic text-gray-700 dark:text-gray-300 leading-relaxed">
+    “I like the moment when I break a man's ego.”
+  </p>
+  <p class="mt-2 text-sm uppercase tracking-wide text-gray-500 dark:text-gray-400">
+    — Bobby Fischer
+  </p>
 
-- Bobby Fischer
-```
+
 
 <br><br>
 
@@ -69,8 +66,9 @@ principalmente se esse homem for você mesmo.
 
 <br><br>
 
-**Descanse em paz, Danya.** </3
-
+<p style="text-align:center; font-style: italic;">
+  <strong>Descanse em paz, Danya.</strong> &lt;/3
+</p>
 <br><br>
 
 <img src="{{site.baseurl}}/assets/img/danya.jpg" width="500" height="500">
